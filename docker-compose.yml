@@ -1,0 +1,9 @@
+services:
+  dev-insights-bot:
+    build: .
+    container_name: dev-insights-bot
+    env_file:
+      - .env
+    volumes:
+      - ./data:/code/data
+    restart: unless-stopped
